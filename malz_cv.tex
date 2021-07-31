@@ -1,0 +1,371 @@
+% this is a LaTeX file
+%----------------------------------------------------------------------
+% name:
+%   malz_cv.tex
+% purpose:
+%   Malz's CV and list of publications
+% to-do:
+%   - Convert all \ads{} to \doi{} -- the DOIs should exist now.
+%   - Is the ``what constrains'' paper published anywhere?
+%   - Should I make an \acronym{} macro that uses \small?  I should.
+% comments:
+%   - Don't list full author lists of 10 or more.
+%   - If you want to include/remove the date, see \renewcommand{\today}.
+%   - Swap 1/0 flag to include invited talks.
+%----------------------------------------------------------------------
+
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fancyhdr, afterpage}
+\usepackage{color, hyperref}
+\usepackage{ifthen}
+\input{defs}
+%\newcommand{\descr}[1]{}
+\newcommand{\descr}[1]{\\ \indent \deemph{#1}}
+
+\begin{document}
+%\thispagestyle{empty}
+\sloppy\sloppypar\raggedbottom\frenchspacing
+% \setcounter{page}{2}
+\setlength{\tabcolsep}{0.5cm}
+\begin{tabular}{lll}
+\textbf{\Large Alex I. Malz}             & & Astronomisches Institut \\%[1ex]
+ORCiD 0000-0002-8676-1622\deemph{\today} & & Ruhr-Universit{\"a}t Bochum (RUB)\\%[1ex]
+\texttt{aimalz@astro.ruhr-uni-bochum.de}               & & Universit{\"a}tstra{\ss}e 150\\%[1ex]
+ \url{https://aimalz.github.io/} & & 44901 Bochum, Germany\\%[1ex]
+%Center for Cosmology and Particle Physics & \hspace{6em} & \\%\deemph{also:} \\
+%Department of Physics                     & & \\%Center for Data Science \\
+%New York University                       & & \\%New York University \\
+%726 Broadway, room 1005                   & & \\%60 Fifth Ave, 7th floor \\
+%New York, NY 10003, USA                   & & \\%New York, NY 10011, USA \\[1ex]
+%\deemph{also:}                            & & \\%\deemph{also:} \\
+% &&\\
+%      & & \\%Flatiron Institute \\
+% &&\\
+%                           & & \\%162 Fifth Ave \\
+%                 & & \\%New York, NY 10010, USA
+\end{tabular}\vspace{1ex} 
+
+\begin{center}
+	\textbf{Postdoctoral Research Fellow, German Centre for Cosmological Lensing}\\
+	\textbf{Visiting Scientist, Lawrence Livermore National Laboratory}
+\end{center}% HACK
+
+\malzheading{Education}
+\begin{list}{}{\malzlist}
+\item
+PhD 2020, Physics, New York University (NYU)
+	\begin{list}{}{\malzlist}
+		\item \deemph{Thesis:} Probabilistic analysis methods for cosmology using uncertainty-dominated photometric data \deemph{Advisor:} David W. Hogg
+	\end{list}{}
+\item
+MS 2014, Astronomy \& Astrophysics, Pennsylvania State University (PSU)
+\item{\"a}
+BS 2011, Physics \& History, California Institute of Technology (Caltech)
+\end{list}
+
+\malzheading{Fellowships \& Honors}% awards?
+\begin{list}{}{\malzlist}
+\item Vera C. Rubin Observatory Legacy Survey of Space and Time (LSST)\\ Dark Energy Science Collaboration (DESC) Builder 2020-
+%\item GCCL Postdoctoral Research Fellow, 2019-2023
+\item Finalist, Dance Your Ph.D. contest, 2019
+\item
+NYU Graduate School of Arts and Sciences Ted Keusseff Fellow, 2018--2019
+\item
+Department of Energy Office of Science Graduate Student Research SCGSR Fellow, 2017
+\item
+NYU Graduate School of Arts and Sciences MacCracken Fellow, 2014--2018
+\item
+PSU Astronomy \& Astrophysics Braddock/Roberts Fellow 2012--2013
+\item
+Caltech President's Scholar, 2006--2011
+\end{list}
+
+\malzheading{Scientific Collaborations \& Affiliations}%Affiliations \& Service}
+% reverse chronological by END date.
+\begin{list}{}{\malzlist}
+	\item Kilo-Degree Survey (KiDS) Member, 2019--.
+	\item LSST-DESC Full Member, 2016--\\
+	\begin{list}{}{\malzlist}
+		\item Photometric Redshifts Working Group Co-Convener, 2019--.
+		\item \past\ Collaboration Council, 2018--; \past\ Membership Committee 2017--2019
+		%  \item Active involvement with PZ, SN, CL, WL, LSS, BL working groups
+	\end{list}
+	\item LSST Informatics \& Statistics Science Collaboration (ISSC) Member, 2019--
+	\item Cosmostatistics Initiative (COIN) Member, 2018--
+		%  \item Active involvement with PZ, SN, CL, WL, LSS, BL working groups
+	  % \item Photometric LSST Astronomical Time-Series Classification Challenge (PLAsTiCC) Team Member, 2017--.
+%\item NYU Center for Cosmology and Particle Physics, 2014--.
+% \item American Astronomical Society (AAS) Junior Member, 2014--.
+%\item PSU Institue for Gravitation and the Cosmos, 2012--2014
+%	\item \past\ Hobby-Eberly Telescope Dark Energy Experiment (HETDEX) Member, 2012--2014
+\end{list}
+
+% \afterpage{\markboth{Alex I. Malz, curriculum vitae continued: \textbf{Selected published software}}{}}%
+
+%\malzheading{Administrative roles}
+%% reverse chronological by END date.
+%\begin{list}{}{\malzlist}
+%\item
+%Executive Director, \project{Moore--Sloan Data Science Environment at \textsc{nyu}}, 2013--2015.
+%\item
+%Deputy Director, New York University Center for Data Science, 2014--2015.
+%\item
+%Director of Undergraduate Studies, Department of Physics, New York University, 2008--2015.
+%\end{list}
+
+%\malzheading{Honors}
+%\begin{list}{}{\malzlist}
+%%% New York University ``Golden Dozen'' Teaching Award, 2004.
+%%% \item
+%%% Princeton University Engineering Council Teaching Award, 2000.
+%%% \item
+%%% Caltech Undergraduate Teaching Award, Associated Students of Caltech, 1996.
+%%% \item
+%%% J. S. Stemple Memorial Prize, Caltech, for Physics PhD oral candidacy
+%%% exam, 1995.
+%%% %%% \item
+%%% %%% Caltech Distinguished Graduate Student Lecture, 1995.
+%%% \item
+%%% Phi Beta Kappa, 1992.  Sigma Xi, 1992.
+%%% \item
+%%% Award of merit, International Physics Olympiad, Bad Ischl, Austria, 1988.
+%%% %%% \item
+%%% %%% First place, University of Waterloo Sir Isaac Newton Physics Contest,
+%%% %%% 1988.
+%\end{list}
+
+% \input{publist.tex}
+
+
+ \malzheading{Grants \& Proposals}
+ \begin{list}{}{\malzlist}
+ 	% RAIL MOU
+ \item LSST Corporation Enabling Science grants
+\begin{list}{}{\malzlist}
+	\item Organizer, ISSC Ambassadors 2021 (six of eight applications for interdisciplinary LSST student research funded)
+	\item PI, ISSC Ambassador: Stress-testing multimodal photometric redshift posteriors in the extrapolative regime \deemph{Summer 2021}
+	\item Co-I, LSST-DESC CLMassMod Sprint Weeks, RUB \deemph{Summer 2019}; CMU \deemph{Summer 2018}
+\end{list}
+\item Co-I, NSF AST-1517237: New Probabilistic Methods for Observational Cosmology \deemph{2015}
+\end{list}
+% begin HACK
+% this next line is a clearpage line with heading hack. Feel free to delete it if pagination is okay.
+%\afterpage{\markboth{Alex I. Malz, curriculum vitae continued: \textbf{\ref{rpcount} Refereed publications}}{}}%
+%\clearpage
+% end HACK
+
+\afterpage{\markboth{Alex I. Malz, curriculum vitae continued: \textbf{Invited talks}}{}}%
+\clearpage
+
+\malzheading{Invited talks}
+\nopagebreak\begin{list}{}{\malzlist}
+\item \talk{}
+	{Origins Cluster Data Science Laboratory Seminar}
+	{Ludwig-Maximilians-Universit{\"a}t Munich \& Technical University of Munich}
+	{Summer 2021}
+\item \talk{Proceed with caution: how, and how not, to use machine learning to probe cosmology}
+	{Machine Learning in Astronomy, id. 103.02}
+	{American Astronomical Society \#238 Meeting-in-a-Meeting}
+	{Spring 2021}
+\item \talk{}
+	{Machine Learning Seminar}
+	{Dark Energy Spectroscopic Instrument (DESI) Collaboration}
+	{Spring 2021}
+\item \talk{}
+	{Institute for Advanced Study Cosmology Lunch Talk}
+	{Princeton University}
+	{Spring 2021}
+\item \talk{}
+	{Panelist}
+	{Machine Learning Club}
+	{Spring 2021}
+\item \talk{Are we there yet? How to read the statistical signposts}
+	{Dark Energy School, LSST-DESC Meeting}
+	{University of Arizona}
+	{Winter 2020}
+\item \talk{How to Advance Cosmology with the Data Products of Machine Learning}
+  {Accurate Lensing in the Era of Precision Cosmology}
+	{Berkeley Center for Cosmological Physics}
+	{Spring 2019}
+\item \talk{Principled Cosmology Inference in the Regime of Uncertainty-Dominated Data}
+  {Institute for Astronomy Seminar}
+	{Royal Observatory Edinburgh}
+	{Spring 2019}
+\item \talk{Maximizing LSST Science with Probabilistic Data Products}
+  {Data Intensive Research in Astronomy and Cosmology Seminar}
+	{University of Washington}
+	{Spring 2019}
+\item \talk{Maximizing LSST Science with Probabilistic Data Products}
+  {Cosmology Seminar}
+	{Lawrence Livermore National Laboratory}
+	{Fall 2018}
+\item \talk{Probabilistic Data Products for Next-Generation Ground-Based Photometric Surveys}
+  {Berkeley Center for Cosmological Physics Seminar}
+	{Lawrence Berkeley National Laboratory}
+	{Fall 2018}
+\item \talk{Practicalities of Massive Next-Generation Photometric Galaxy Surveys}
+  {Astronomy Seminar}
+	{Leiden University}
+	{Fall 2018}
+\item \talk{Challenges of working with photo-z PDFs}
+	{Colours of the Universe}
+	{University of Leiden Lorentz Center}
+	{Fall 2018}
+\item \talk{Supernova Classification}
+  {ML + Time Domain Workshop}
+	{Carnegie Mellon University}
+	{Summer 2018}
+\item \talk{How to Advance Cosmology with the Data Products of Machine Learning}
+  {Seminar}
+	{Laboratoire de Physique Corpusculaire de Clermont}
+	{Summer 2018}
+\item \talk{Probabilistic Photometric Redshifts for Large Surveys}
+  {Colloquium}
+	{Laboratoire de Physique Subatomique et de Cosmologie de Grenoble}
+	{Summer 2018}
+\item \talk{Probabilistic Photometric Redshifts for Next-Generation Galaxy Surveys}
+  {Astronomy Colloquium}
+	{State University of New York at Stony Brook}
+	{Fall 2017}
+\item \talk{Approximating Probabilistic Photometric Redshifts for Large Surveys}
+  {Canadian Institute for Theoretical Astrophysics Seminar}
+	{University of Toronto}
+	{Fall 2017}
+\item \talk{Cosmological Hierarchical Inference with Probabilistic Photometric Redshifts}
+  {Kavli Institute for Particle Astrophysics and Cosmology Tea}
+	{Stanford University}
+	{Summer 2017}
+\item \talk{Photo-z PDF Tests and Storage}
+  {Photo-z Workshop for Large Surveys}
+	{Tohoku University}
+	{Spring 2017}
+\item \talk{A Fully Probabilistic Approach to the Redshift Distribution Function}
+  {Astronomy Seminar}
+	{University College London}
+	{Summer 2016}
+\item \talk{A Fully Probabilistic Approach to the Redshift Distribution Function}
+  {Astronomy Seminar}
+	{Imperial College London}
+	{Summer 2016}
+\item \talk{A Fully Probabilistic Approach to the Redshift Distribution Function}
+  {Photometric Redshifts for LSST}
+	{University of Pittsburgh}
+	{Spring 2016}
+\end{list}
+
+% \afterpage{\markboth{Alex I. Malz, curriculum vitae continued: \textbf{Selected contributed talks}}{}}%
+% \clearpage
+\malzheading{Selected contributed talks}
+\begin{list}{}{\malzlist}
+%\item SCMA poster
+\item \talk{The DESC Photometric Redshifts Working Group: Challenges \& Opportunities}
+	{DESC Special Session, id. 443.05}
+	{American Astronomical Society \#237}
+	{Spring 2020}
+\item \talk{The devil is in the details: interpreting probabilities from machine learning}
+	{Bayesian Deep Learning for Cosmology and Gravitational Waves}
+	{Astroparticle and Cosmology Laboratory, Université de Paris}
+	{Winter 2020}
+\item \talk{Experimental design and metrics for LSST-DESC}
+	{Tutorial, DESC Sprint Week}
+	{Texas A\&M University}
+	{Fall 2019}
+\item \talk{Probabilistic data analysis methods for large photometric surveys}
+	{Surveys \& Large Programs, id. 313.05D}
+	{American Astronomical Society \#233}
+	{Winter 2019}
+\item \talk{The Photometric LSST Astronomical Time Series Classification Challenge (PLAsTiCC): challenge design and evaluation criteria}
+	{Larger Efforts in Education \& Public Outreach, id. 212.05}
+	{American Astronomical Society \#233}
+	{Winter 2019}
+\item \talk{Toward stack-free cosmology}
+	{Chalkboard talk, Statistical Challenges in Large-Scale Structure in the Era of LSST}
+% % \afterpage{\markboth{}{}}%
+	{Oxford University}
+	{Spring 2018}
+% ({\em chalkboard})
+\item \talk{Supernova Cosmology Inference with Probabilistic Photometric Redshifts}
+	{Supernovae: The LSST Revolution}
+	{Center for Interdisciplinary Exploration and Research in Astrophysics, Northwestern University}
+	{Spring 2017}
+\item \talk{Inference of Galaxy Population Statistics Using Photometric Redshift Probability Distribution Functions}
+	{Statistical Challenges in Modern Astronomy}
+	{Carnegie Mellon University}
+	{Spring 2016}
+\item \talk{Cosmological Inference Using Photometric Redshift Probability Distribution Functions}
+	{Statistical Challenges in 21st Century Cosmology}
+	{Chania, Crete}
+	{Spring 2016}
+% \item \talk{Probing Gravity in the High-Redshift Universe with HETDEX'}{eighborhood Workshop on Astrophysics and Cosmology}{PSU}{Spring 2014}
+% \item \talk{Lyman Alpha Emitters: Cosmic Auditors of Gravity'}{Lyman-Alpha Emitter Summit}{PSU}{Fall 2013}
+\end{list}
+
+\afterpage{\markboth{Alex I. Malz, curriculum vitae continued: \textbf{Organization \& Community Service}}{}}%
+\clearpage
+
+\malzheading{Organization \& Community Service}\nopagebreak\begin{list}{}{\malzlist}
+	%	\item DESC
+	\item Hackathon leader, From Quarks to Cosmos (Carnegie Mellon University) \deemph{Summer 2021}
+	\item Tutorial Co-organizer, Bayesian Deep Learning for Cosmology and Gravitational Waves Workshop (Astroparticle and Cosmology Laboratory Université de Paris) \deemph{Winter 2020}
+	\item Co-organizer, Photometric LSST Astronomical Time-Series Classification Challenge (PLAsTiCC) Workshop (NYU) \deemph{Spring 2018}
+	\item Local Organizing Committee member, Astro Hack Week (NYU) \deemph{Fall 2015}
+\end{list}
+
+\malzheading{Public outreach}
+\begin{list}{}{\malzlist}
+\item Judge at the New York City Science and Engineering Fair finals event \deemph{Spring 2021}%(03/2021)
+\item Juror at the German Young Physicists' Tournament North Rhine-Westphalia regional competition \deemph{Winter 2021}%(02/2021)
+\item Finalist in the 2019 Dance Your Ph.D. contest %(01/2019)
+  \begin{list}{}{\malzlist}
+  \item Produced, directed, choreographed, and danced an entertaining explanation of the CHIPPR Bayesian hierarchical model of Malz \& Hogg (2021); \href{https://youtu.be/vKs3PYqZWg8}{https://youtu.be/vKs3PYqZWg8}
+    \end{list}
+\item Math Circle Speaker at Bridge to Enter Advanced Mathematics, a program to help underserved students enter advanced study in mathematics \deemph{Summer 2018}% (07/2018)
+  \begin{list}{}{\malzlist}
+  \item \deemph{Designed and taught applied geometry lessons in the context of astronomy}% to talented sixth graders at low-performing inner-city schools
+  \end{list}
+\item Judge at the New York City Science and Engineering Fair finals event \deemph{Spring 2018}%(03/2018)
+\item Guest Speaker at Hunter College High School Science Club \deemph{Spring 2016}%(04/2016)
+\item Judge at the Pennsylvania Junior Academy of Science finals event \deemph{Spring 2013}%(05/2013)
+\item Outreach Developer and Facilitator at PSU AstroFest \deemph{Summers 2012, 2013, 2014}
+  \begin{list}{}{\malzlist}
+    \item \deemph{Created and implemented tie-dye-based activities teaching astronomy concepts}% for multiple age groups
+  \end{list}
+\end{list}
+
+ \malzheading{Research Supervision \& Mentoring}
+\begin{list}{}{\malzlist}
+	\item 2021: Nicola Hunfeld: RUB, MS (2022)
+	\item 2021: Natalia Stylianou: University of Leicester, BS (2022)
+	\item 2018: David Mykytyn, Dave Perrett, Ted Singer \& Zora Tung: non-academic professionals
+	\item 2018: Lia Lubit \& Marin Hyatt: Hunter College High School (2020)
+\end{list}
+
+ \malzheading{Teaching}
+ \begin{list}{}{\malzlist}
+ 	\item Instructor on Record
+ 	  \begin{list}{}{\malzlist}
+             \item PSU ASTRO 011 Elementary Astronomy Laboratory (Spring 2013)
+ 	\end{list}
+ 	\item Teaching Assistant
+           \begin{list}{}{\malzlist}
+             \item NYU PHYS-UA 7 The Universe: Its Nature and History (Spring 2018)
+             \item NYU PHYS-UA 15 Introduction to Cosmology (Fall 2017)
+             \item PSU ASTRO 120 The Big Bang Universe (Spring 2014)
+             \item PSU ASTRO 292 Astronomy of the Distant Universe (Springs 2013, 2014)
+             \item PSU ASTRO 291 Astronomical Methods and the Solar System (Falls 2012, 2013)
+             \item PSU ASTRO 001 Astronomical Universe (Falls 2012, 2013)
+           \end{list}
+         \item Guest Lecturer
+           \begin{list}{}{\malzlist}
+           \item PSU ASTRO 485 Introduction to High-Energy Astronomy (10/2013)
+           \item PSU ASTRO 291 Astronomical Methods and the Solar System (12/2012)
+           \item PSU ASTRO 001 Astronomical Universe (10/2012)
+           \end{list}
+ \end{list}
+% % \afterpage{\markboth{}{}}%
+
+\afterpage{\markboth{Alex I. Malz, curriculum vitae continued: \textbf{Publications}}{}}%
+\clearpage
+
+\input{publist.tex}
+\end{document}
