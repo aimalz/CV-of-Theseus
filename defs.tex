@@ -1,0 +1,77 @@
+
+% put in the date -- or not
+  \renewcommand{\today}%5{2019 May 22}
+
+% hypertex insanity
+  \definecolor{linkcolor}{rgb}{0,0,0.33}
+  \definecolor{grey}{rgb}{0.5,0.5,0.5}
+  \hypersetup{
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=grey,        % color of internal links
+    citecolor=linkcolor,    % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=linkcolor      % color of external links
+  }
+
+  % repeated text formatting
+  \newcommand{\current}{\deemph{current:}}
+  \newcommand{\past}{\deemph{past:}}
+  \newcommand{\latin}[1]{\textsl{#1}}
+  \newcommand{\etal}{\latin{et~al.}}
+  \newcommand{\satellite}[1]{\textsl{#1}}
+  \newcommand{\project}[1]{\textsl{#1}}
+  \newcommand{\usd}[1]{{#1}\,\textsc{usd}}
+  \newcommand{\eur}[1]{{#1}\,\textsc{eur}}
+  \newcommand{\grantnumber}[2]{{\footnotesize{#1}}; #2,~\textsc{pi}}
+  % \newcommand{\talk}[4]{{\em #1}, #2, #3, #4}
+  \newcommand{\talk}[4]{#3, #2}% \deemph{#4}}
+  % \newcommand{\talksem}[3]{{\em #1}, #2, #3}
+%  \newcommand{\talksem}[3]{#2 \deemph{#3}}
+% literature links--use doi if you can
+  \newcommand{\doi}[2]{\href{http://dx.doi.org/#1}{``{#2}''}}
+  \newcommand{\ads}[2]{\href{http://adsabs.harvard.edu/abs/#1}{{#2}}}
+  \newcommand{\isbn}[1]{{\footnotesize(\textsc{isbn:}{#1})}}
+  \newcommand{\arxiv}[2]{\href{http://arxiv.org/abs/#1}{{#2}\ (\texttt{arXiv:#1})}}
+% define de-emphasize commands
+  \newcommand{\deemph}[1]{\textcolor{grey}{\footnotesize{#1}}}
+  \newcommand{\pubnumber}[1]{\deemph{{#1}.}}
+% define heading command SERIOUS HACKING HERE
+  \newcommand{\malzheading}[1]{\addvspace{1ex}\pagebreak[3]%
+    \par\textbf{#1}\nopagebreak%
+    \afterpage{\markboth{Alex I. Malz, curriculum vitae continued: \textbf{#1}}{}}%
+    \nopagebreak\\*[0.5ex]\nopagebreak}%
+% custom list characteristics
+  \newcounter{refpubnum}
+  \newcommand{\malzlist}{%
+    \rightmargin=0in
+    \leftmargin=0.18in
+    \topsep=0ex
+    \partopsep=0pt
+    \itemsep=0.2ex
+    \parsep=0pt
+    \itemindent=-1.0\leftmargin
+    \listparindent=0.0\leftmargin
+    \settowidth{\labelsep}{~}
+    \usecounter{refpubnum}
+  }
+  \newcommand{\note}[1]{{\small\par{#1}}}
+% Margins and spaces
+  \raggedright
+  \setlength{\oddsidemargin}{0in}
+  \setlength{\topmargin}{-0.25in}
+  \setlength{\headsep}{0.20in}
+  \setlength{\headheight}{0.25in}
+  \setlength{\textheight}{9.75in}
+%  \addtolength{\textheight}{-\headsep}
+%  \addtolength{\textheight}{-\headheight}
+  \addtolength{\topmargin}{-\headsep}
+  \addtolength{\topmargin}{-\headheight}
+  \setlength{\textwidth}{6.50in}
+  \setlength{\parindent}{0in}
+  \setlength{\parskip}{1ex}
+% Headings and footing
+  \renewcommand{\headrulewidth}{0pt}
+  \pagestyle{fancy}
+  \lhead{\deemph{\leftmark}}
+  \rhead{\deemph{\thepage}}
+  \cfoot{}
