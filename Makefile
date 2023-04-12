@@ -3,10 +3,11 @@ RM = /bin/rm -fv
 .SUFFIXES: .tex .dvi .ps .pdf
 
 # ALLFILES = $(patsubst %.tex,%.pdf,$(wildcard *.tex))
-all: malz_cv.pdf pubs.pdf
+all: malz_cv.pdf pubs.pdf malz_cv_long.pdf
 
 malz_cv.pdf: malz_cv.tex publist.tex defs.tex
 pubs.pdf: pubs.tex publist.tex defs.tex
+malz_cv_long.pdf: malz_cv_long.tex publist.tex defs.tex
 
 %.pdf: %.tex
 	pdflatex $*
@@ -18,3 +19,6 @@ clean:
 
 spotless: clean
 	$(RM) *.ps *.pdf
+
+.PHONY: all
+
